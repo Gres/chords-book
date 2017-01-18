@@ -6,7 +6,7 @@ import { Song } from '../song';
 import { SongService } from '../song.service';
 
 @Component({
-  moduleId: module.id,
+  // moduleId: module.id,
   selector: 'my-songs',
   templateUrl: './songs.component.html',
   styleUrls: ['./songs.component.css']

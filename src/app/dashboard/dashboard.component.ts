@@ -5,7 +5,6 @@ import { Song } from '../song';
 import { SongService } from '../song.service';
 
 @Component({
-  moduleId: module.id,
   selector: 'my-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']

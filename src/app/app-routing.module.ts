@@ -16,7 +16,7 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'detail/:id',
+    path: 'song/:id',
     component: SongComponent
   },
   {

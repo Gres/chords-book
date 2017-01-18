@@ -12,7 +12,6 @@ import 'rxjs/add/operator/find';
 import {FroalaEditorCompnoent} from 'ng2-froala-editor/ng2-froala-editor';
 
 @Component({
-  moduleId: module.id,
   selector: 'my-song-detail',
   templateUrl: './song.component.html',
   styleUrls: ['./song.component.css']
@@ -21,7 +20,6 @@ import {FroalaEditorCompnoent} from 'ng2-froala-editor/ng2-froala-editor';
 export class SongComponent implements OnInit {
   @Input() song$: Observable<any>;
   @Output() close = new EventEmitter();
-  text: string = '<div>Hey we are testing Froala Editor</div>';
   error: any;
   navigated = false; // true if navigated here
   authors: Observable<Author[]>;
@@ -39,8 +37,6 @@ export class SongComponent implements OnInit {
       if (params['id'] !== undefined) {
         let id = +params['id'];
         this.navigated = true;
-        console.info(id, this.song$, this.songService.items);
-
         this.songService.load(id);
         this.songService.items
           .map(songs => songs.find(item => item.id === id))
